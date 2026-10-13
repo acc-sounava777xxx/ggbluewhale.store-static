@@ -1,0 +1,28 @@
+html[data-theme-color="custom"],
+html[data-theme-color="custom"][data-bs-theme] {
+  --accent: 220, 20, 120 !important;
+  --accent-fill: 200, 10, 100 !important;
+  --info: 40, 180, 200 !important;
+  --info-fill: 30, 160, 180 !important;
+  --success: 30, 180, 90 !important;
+  --success-fill: 20, 160, 70 !important;
+  --warning: 240, 180, 20 !important;
+  --warning-fill: 220, 160, 10 !important;
+  --danger: 220, 40, 60 !important;
+  --danger-fill: 200, 20, 40 !important;
+}
+
+/* visible proof */
+.navbar {
+  border-bottom: 3px solid rgb(var(--accent-fill)) !important;
+}
+.card {
+  border-radius: 4px !important;
+  border: 2px dashed rgb(var(--accent-fill)) !important;
+}
+.btn-primary {
+  background: rgb(var(--accent-fill)) !important;
+  border-color: rgb(var(--accent-fill)) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
