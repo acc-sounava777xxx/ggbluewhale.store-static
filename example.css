@@ -1,0 +1,38 @@
+/* Test custom theme — minimal proof that the URL loads and overrides apply.
+   Everything below assumes the custom-CSS branch is active
+   (data-theme-color="custom" is set on <html>), so the built-in
+   accent rules are disabled and these win. */
+
+html[data-bs-theme] {
+  --accent: 220, 20, 120;
+  --accent-fill: 200, 10, 100;
+  --info: 40, 180, 200;
+  --info-fill: 30, 160, 180;
+  --success: 30, 180, 90;
+  --success-fill: 20, 160, 70;
+  --warning: 240, 180, 20;
+  --warning-fill: 220, 160, 10;
+  --danger: 220, 40, 60;
+  --danger-fill: 200, 20, 40;
+}
+
+/* Make it obvious something changed */
+body {
+  background: rgb(var(--bg)) !important;
+}
+
+.navbar {
+  border-bottom: 3px solid rgb(var(--accent-fill)) !important;
+}
+
+.card {
+  border-radius: 4px !important;
+  border: 2px dashed rgb(var(--accent-fill)) !important;
+}
+
+.btn-primary {
+  background: rgb(var(--accent-fill)) !important;
+  border-color: rgb(var(--accent-fill)) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
